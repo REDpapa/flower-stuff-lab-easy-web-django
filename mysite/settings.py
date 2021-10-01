@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%_m264bet1^32*764n-p+&d^^d(y3&28)ls460@rs%rf4fhyr$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'widget_tweaks'
+    'widget_tweaks',
     'app',
 ]
 
@@ -57,7 +57,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR), 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
