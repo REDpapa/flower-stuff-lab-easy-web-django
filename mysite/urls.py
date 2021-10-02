@@ -24,9 +24,9 @@ from django.conf import settings
 app_name = 'app'
 urlpatterns = [
     path('', views.index),
-    path('api/vl/boot', views.BootView.as_view()),
-    path('api/vl/verify-pincode', views.Verify_pincode.as_view()),
-    path('api/vl/prodict-image', views.Prodict_image.as_view()),
+    path('api/v1/boot', views.BootView.as_view()),
+    path('api/v1/verify-pincode', views.Verify_pincode.as_view()),
+    path('api/v1/predict-image', views.Predict_image.as_view()),
 ]
 
 

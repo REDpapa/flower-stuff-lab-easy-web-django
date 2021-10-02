@@ -33,7 +33,7 @@ class Verify_pincode(View):
 
 
 # NOTE:'api/vl/prodict-image'が呼び出されるとjsonを返す。クラス
-class Prodict_image(View):
+class Predict_image(View):
     def get(self, request):
         data = {
             'test_massage': 'Is this right(Prodict_image)'
